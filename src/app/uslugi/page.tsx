@@ -15,7 +15,7 @@ export default function UslugiPage() {
     <>
       <Header />
       <main className="flex-1">
-        <div className="mx-auto max-w-6xl px-4 pt-14">
+        <div className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900">Nasze usługi</h1>
           <p className="mt-3 max-w-2xl text-zinc-600">
             Naprawa AGD, elektryk i hydraulik w Krakowie i okolicach. Wybierz usługę, aby zobaczyć

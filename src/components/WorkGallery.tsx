@@ -21,7 +21,7 @@ const items = [
 export default function WorkGallery() {
   return (
     <section id="realizacje" className="bg-zinc-50 py-16">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-zinc-900">Realizacje</h2>
         <div className="mt-8 grid gap-8 md:grid-cols-3">
           {items.map((item) => (

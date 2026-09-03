@@ -4,7 +4,7 @@ import { PHONE, PHONE_DISPLAY, WHATSAPP_URL, TELEGRAM_URL } from "@/lib/contact"
 export default function Footer() {
   return (
     <footer className="border-t border-zinc-200 bg-zinc-900 text-zinc-300">
-      <div className="mx-auto max-w-6xl px-4 py-10">
+      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
             <p className="text-lg font-bold text-white">

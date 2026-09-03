@@ -20,7 +20,7 @@ function ArrowIcon() {
 
 export default function ImpactBento() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-20">
+    <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">
           Dlaczego warto nas wybrać

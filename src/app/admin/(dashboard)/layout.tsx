@@ -8,7 +8,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
   return (
     <div className="min-h-screen bg-zinc-100">
       <header className="border-b border-zinc-200 bg-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <div className="flex items-center gap-6">
             <span className="font-bold text-zinc-900">NaprawyKraków CRM</span>
             <nav className="flex gap-4 text-sm font-medium text-zinc-600">
@@ -23,7 +23,7 @@ export default async function AdminDashboardLayout({ children }: { children: Rea
           </form>
         </div>
       </header>
-      <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">{children}</main>
     </div>
   );
 }

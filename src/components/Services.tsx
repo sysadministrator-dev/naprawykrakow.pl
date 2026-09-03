@@ -5,7 +5,7 @@ import { servicePages } from "@/lib/service-pages";
 
 export default function Services() {
   return (
-    <section id="uslugi" className="mx-auto max-w-6xl px-4 py-16">
+    <section id="uslugi" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <h2 className="text-3xl font-bold text-zinc-900">Popularne usługi</h2>
       <p className="mt-2 max-w-2xl text-zinc-600">
         Naprawa AGD, elektryka i hydraulika w Krakowie i okolicach. Wybierz usługę, aby

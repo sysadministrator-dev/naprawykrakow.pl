@@ -4,7 +4,7 @@ import ReviewCard from "@/components/ReviewCard";
 export default function Reviews() {
   return (
     <section id="opinie" className="bg-zinc-50 py-20">
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-sm font-semibold uppercase tracking-widest text-primary">Opinie</p>
           <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-zinc-900 sm:text-4xl">

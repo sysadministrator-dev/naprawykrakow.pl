@@ -4,7 +4,7 @@ import { PHONE, PHONE_DISPLAY } from "@/lib/contact";
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="text-lg font-bold tracking-tight text-zinc-900">
           Naprawy<span className="text-primary">Kraków</span>
         </Link>

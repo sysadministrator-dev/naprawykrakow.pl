@@ -13,7 +13,7 @@ export default function ServiceLandingTemplate({ page }: { page: ServicePage }) 
       <Header />
       <main className="flex-1">
         <section className="border-b border-zinc-200 bg-zinc-50">
-          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-[1.2fr_1fr] md:items-center">
+          <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 md:grid-cols-[1.2fr_1fr] md:items-center lg:px-8">
             <div>
               <p className="mb-3 inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-semibold text-primary/90">
                 Dojazd nawet do 12 godzin
