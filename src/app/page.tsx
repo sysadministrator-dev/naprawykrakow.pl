@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ImpactBento from "@/components/ImpactBento";
 import Services from "@/components/Services";
 import WorkGallery from "@/components/WorkGallery";
 import Reviews from "@/components/Reviews";
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <ImpactBento />
         <Services />
         <WorkGallery />
         <Reviews />
