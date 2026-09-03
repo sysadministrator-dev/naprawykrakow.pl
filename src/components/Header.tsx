@@ -1,9 +1,25 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PHONE, PHONE_DISPLAY } from "@/lib/contact";
 
 export default function Header() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 40);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/90 backdrop-blur">
+    <header
+      className={`fixed inset-x-0 top-0 z-40 border-b border-zinc-200 bg-white/70 backdrop-blur-md transition-all duration-300 ${
+        visible ? "translate-y-0 opacity-100 shadow-sm" : "-translate-y-full opacity-0"
+      }`}
+    >
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <Link href="/" className="text-lg font-bold tracking-tight text-zinc-900">
           Naprawy<span className="text-primary">Kraków</span>
