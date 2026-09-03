@@ -8,15 +8,13 @@ function QuoteIcon() {
   );
 }
 
-const COLUMN_OFFSET = ["lg:mt-0", "lg:mt-14", "lg:mt-28"];
-
 function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
   const initial = review.author.trim().charAt(0).toUpperCase();
 
   return (
-    <figure className="rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm">
+    <figure className="flex h-full flex-col rounded-2xl border border-zinc-200 bg-white p-7 shadow-sm">
       <QuoteIcon />
-      <blockquote className="mt-4 text-zinc-700">{review.text}</blockquote>
+      <blockquote className="mt-4 line-clamp-4 flex-1 text-zinc-700">{review.text}</blockquote>
       <figcaption className="mt-6 flex items-center gap-3">
         <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
           {initial}
@@ -30,22 +28,7 @@ function ReviewCard({ review }: { review: (typeof reviews)[number] }) {
   );
 }
 
-function ReviewRow({ items }: { items: typeof reviews }) {
-  return (
-    <div className="grid gap-6 lg:grid-cols-3">
-      {items.map((review, i) => (
-        <div key={review.author} className={COLUMN_OFFSET[i % 3]}>
-          <ReviewCard review={review} />
-        </div>
-      ))}
-    </div>
-  );
-}
-
 export default function Reviews() {
-  const row1 = reviews.slice(0, 3);
-  const row2 = reviews.slice(3, 6);
-
   return (
     <section id="opinie" className="bg-zinc-50 py-20">
       <div className="mx-auto max-w-6xl px-4">
@@ -59,11 +42,10 @@ export default function Reviews() {
           </p>
         </div>
 
-        <div className="mt-16 space-y-6 lg:space-y-0">
-          <ReviewRow items={row1} />
-          <div className="mt-6 lg:mt-16">
-            <ReviewRow items={row2} />
-          </div>
+        <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {reviews.map((review) => (
+            <ReviewCard key={review.author} review={review} />
+          ))}
         </div>
       </div>
     </section>
