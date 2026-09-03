@@ -42,21 +42,20 @@ body {
 
 @keyframes hero-wipe {
   from {
-    transform: scaleX(1);
+    transform: skewX(-8deg) translateX(0%);
   }
   to {
-    transform: scaleX(0);
+    transform: skewX(-8deg) translateX(-100%);
   }
 }
 
 .hero-image-wipe {
-  transform-origin: left center;
   animation: hero-wipe 1.1s cubic-bezier(0.65, 0, 0.35, 1) 150ms both;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-image-wipe {
     animation: none;
-    transform: scaleX(0);
+    transform: skewX(-8deg) translateX(-100%);
   }
 }

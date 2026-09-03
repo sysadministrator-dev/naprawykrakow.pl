@@ -91,7 +91,7 @@ export default function Hero() {
             priority
             className="object-cover"
           />
-          <div className="hero-image-wipe absolute inset-0 bg-background" />
+          <div className="hero-image-wipe absolute inset-y-0 -left-[25%] w-[150%] bg-background" />
         </div>
       </div>
     </section>
