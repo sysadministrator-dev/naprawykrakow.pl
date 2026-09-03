@@ -1,0 +1,36 @@
+import Link from "next/link";
+import { PHONE, PHONE_DISPLAY } from "@/lib/contact";
+
+export default function Header() {
+  return (
+    <header className="sticky top-0 z-40 border-b border-stone-200 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+        <Link href="/" className="text-lg font-bold tracking-tight text-stone-900">
+          Naprawy<span className="text-accent">Kraków</span>
+        </Link>
+
+        <nav className="hidden items-center gap-6 text-sm font-medium text-stone-600 md:flex">
+          <a href="#uslugi" className="hover:text-stone-900">Usługi</a>
+          <a href="#realizacje" className="hover:text-stone-900">Realizacje</a>
+          <a href="#opinie" className="hover:text-stone-900">Opinie</a>
+          <a href="#zasieg" className="hover:text-stone-900">Zasięg działania</a>
+        </nav>
+
+        <div className="flex items-center gap-3">
+          <a
+            href={`tel:${PHONE}`}
+            className="hidden text-sm font-semibold text-stone-900 sm:block"
+          >
+            📞 {PHONE_DISPLAY}
+          </a>
+          <a
+            href="#zamow"
+            className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:bg-accent-dark"
+          >
+            Umów wizytę
+          </a>
+        </div>
+      </div>
+    </header>
+  );
+}
