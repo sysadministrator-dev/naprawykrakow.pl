@@ -83,7 +83,7 @@ export default function Hero() {
       </div>
 
       <div className="relative hidden min-h-[50vh] md:block">
-        <div className="absolute inset-0 [clip-path:polygon(12%_0,100%_0,100%_100%,0_100%)]">
+        <div className="absolute inset-0 overflow-hidden [clip-path:polygon(12%_0,100%_0,100%_100%,0_100%)]">
           <Image
             src="/images/work-elektryk.png"
             alt="Nasz fachowiec przy pracy"
@@ -91,6 +91,7 @@ export default function Hero() {
             priority
             className="object-cover"
           />
+          <div className="hero-image-wipe absolute inset-0 bg-primary" />
         </div>
       </div>
     </section>
