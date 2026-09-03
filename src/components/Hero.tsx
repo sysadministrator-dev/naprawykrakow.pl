@@ -2,7 +2,7 @@ import { PHONE, PHONE_DISPLAY } from "@/lib/contact";
 
 export default function Hero() {
   return (
-    <section className="border-b border-zinc-200 bg-zinc-50">
+    <section className="flex min-h-screen items-center border-b border-zinc-200 bg-zinc-50">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 md:grid-cols-[1.2fr_1fr] md:items-center md:py-20">
         <div>
           <p className="mb-3 inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-semibold text-primary/90">
