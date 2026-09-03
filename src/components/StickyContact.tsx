@@ -15,7 +15,7 @@ export default function StickyContact() {
       <a
         href={`tel:${PHONE}`}
         aria-label="Zadzwoń"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-accent text-2xl text-white shadow-lg transition hover:scale-105"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-2xl text-white shadow-lg transition hover:scale-105"
       >
         📞
       </a>

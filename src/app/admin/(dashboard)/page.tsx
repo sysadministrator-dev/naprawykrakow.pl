@@ -33,35 +33,35 @@ function toDatetimeLocal(date: Date | null) {
 
 function OrderEditRow({ order }: { order: OrderModel }) {
   return (
-    <form action={updateOrderAction} className="grid gap-3 rounded-xl border border-stone-200 bg-white p-4 sm:grid-cols-[1fr_auto_auto_auto]">
+    <form action={updateOrderAction} className="grid gap-3 rounded-xl border border-zinc-200 bg-white p-4 sm:grid-cols-[1fr_auto_auto_auto]">
       <input type="hidden" name="id" value={order.id} />
       <div>
-        <p className="font-semibold text-stone-900">{order.name} · {order.phone}</p>
-        <p className="text-sm text-stone-600">{order.service} — {order.address}</p>
-        {order.message && <p className="mt-1 text-sm text-stone-500">{order.message}</p>}
+        <p className="font-semibold text-zinc-900">{order.name} · {order.phone}</p>
+        <p className="text-sm text-zinc-600">{order.service} — {order.address}</p>
+        {order.message && <p className="mt-1 text-sm text-zinc-500">{order.message}</p>}
         {order.preferredAt && (
-          <p className="mt-1 text-xs text-stone-400">Preferowany termin klienta: {order.preferredAt}</p>
+          <p className="mt-1 text-xs text-zinc-400">Preferowany termin klienta: {order.preferredAt}</p>
         )}
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-stone-500">Termin wizyty</label>
+        <label className="mb-1 block text-xs font-medium text-zinc-500">Termin wizyty</label>
         <input
           type="datetime-local"
           name="scheduledAt"
           defaultValue={toDatetimeLocal(order.scheduledAt)}
-          className="rounded-lg border border-stone-300 px-2 py-1.5 text-sm"
+          className="rounded-lg border border-zinc-300 px-2 py-1.5 text-sm"
         />
       </div>
       <div>
-        <label className="mb-1 block text-xs font-medium text-stone-500">Status</label>
-        <select name="status" defaultValue={order.status} className="rounded-lg border border-stone-300 bg-white px-2 py-1.5 text-sm">
+        <label className="mb-1 block text-xs font-medium text-zinc-500">Status</label>
+        <select name="status" defaultValue={order.status} className="rounded-lg border border-zinc-300 bg-white px-2 py-1.5 text-sm">
           {Object.values(OrderStatus).map((s) => (
             <option key={s} value={s}>{STATUS_LABELS[s]}</option>
           ))}
         </select>
       </div>
       <div className="flex items-end">
-        <button type="submit" className="rounded-lg bg-accent px-4 py-1.5 text-sm font-semibold text-white hover:bg-accent-dark">
+        <button type="submit" className="rounded-lg bg-primary px-4 py-1.5 text-sm font-semibold text-white hover:bg-primary/90">
           Zapisz
         </button>
       </div>
@@ -109,17 +109,17 @@ export default async function AdminCalendarPage({
     <div className="grid gap-8 lg:grid-cols-[2fr_1fr]">
       <section>
         <div className="mb-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-stone-900 capitalize">
+          <h1 className="text-xl font-bold text-zinc-900 capitalize">
             {format(monthDate, "LLLL yyyy", { locale: pl })}
           </h1>
           <div className="flex gap-2 text-sm font-medium">
-            <Link href={`/admin?month=${prevMonth}`} className="rounded-lg border border-stone-300 px-3 py-1.5 hover:bg-stone-100">←</Link>
-            <Link href={`/admin?month=${format(today, "yyyy-MM")}`} className="rounded-lg border border-stone-300 px-3 py-1.5 hover:bg-stone-100">Dziś</Link>
-            <Link href={`/admin?month=${nextMonth}`} className="rounded-lg border border-stone-300 px-3 py-1.5 hover:bg-stone-100">→</Link>
+            <Link href={`/admin?month=${prevMonth}`} className="rounded-lg border border-zinc-300 px-3 py-1.5 hover:bg-zinc-100">←</Link>
+            <Link href={`/admin?month=${format(today, "yyyy-MM")}`} className="rounded-lg border border-zinc-300 px-3 py-1.5 hover:bg-zinc-100">Dziś</Link>
+            <Link href={`/admin?month=${nextMonth}`} className="rounded-lg border border-zinc-300 px-3 py-1.5 hover:bg-zinc-100">→</Link>
           </div>
         </div>
 
-        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-stone-500">
+        <div className="grid grid-cols-7 gap-1 text-center text-xs font-semibold text-zinc-500">
           {["Pn", "Wt", "Śr", "Cz", "Pt", "So", "Nd"].map((d) => (
             <div key={d} className="py-1">{d}</div>
           ))}
@@ -139,14 +139,14 @@ export default async function AdminCalendarPage({
                 href={`/admin?month=${format(monthDate, "yyyy-MM")}&date=${key}`}
                 className={[
                   "flex h-20 flex-col items-start rounded-lg border p-2 text-sm transition",
-                  inMonth ? "bg-white" : "bg-stone-50 text-stone-400",
-                  isSelected ? "border-accent ring-2 ring-accent/30" : "border-stone-200",
+                  inMonth ? "bg-white" : "bg-zinc-50 text-zinc-400",
+                  isSelected ? "border-primary ring-2 ring-primary/30" : "border-zinc-200",
                   isToday ? "font-bold" : "",
                 ].join(" ")}
               >
                 <span>{format(day, "d")}</span>
                 {count > 0 && (
-                  <span className="mt-auto rounded-full bg-accent/15 px-2 py-0.5 text-xs font-semibold text-accent-dark">
+                  <span className="mt-auto rounded-lg bg-primary/15 px-2 py-0.5 text-xs font-semibold text-primary/90">
                     {count} {count === 1 ? "zlecenie" : "zlecenia"}
                   </span>
                 )}
@@ -156,11 +156,11 @@ export default async function AdminCalendarPage({
         </div>
 
         <div className="mt-8">
-          <h2 className="mb-3 font-semibold text-stone-900">
+          <h2 className="mb-3 font-semibold text-zinc-900">
             Zlecenia — {format(selectedDate, "d MMMM yyyy", { locale: pl })}
           </h2>
           {selectedDayOrders.length === 0 ? (
-            <p className="text-sm text-stone-500">Brak zaplanowanych zleceń w tym dniu.</p>
+            <p className="text-sm text-zinc-500">Brak zaplanowanych zleceń w tym dniu.</p>
           ) : (
             <div className="grid gap-3">
               {selectedDayOrders.map((o) => (
@@ -172,10 +172,10 @@ export default async function AdminCalendarPage({
       </section>
 
       <aside>
-        <h2 className="mb-3 font-semibold text-stone-900">Nieprzypisane zgłoszenia ({unscheduled.length})</h2>
+        <h2 className="mb-3 font-semibold text-zinc-900">Nieprzypisane zgłoszenia ({unscheduled.length})</h2>
         <div className="grid gap-3">
           {unscheduled.length === 0 && (
-            <p className="text-sm text-stone-500">Wszystkie zgłoszenia mają przypisany termin.</p>
+            <p className="text-sm text-zinc-500">Wszystkie zgłoszenia mają przypisany termin.</p>
           )}
           {unscheduled.map((o) => (
             <OrderEditRow key={o.id} order={o} />

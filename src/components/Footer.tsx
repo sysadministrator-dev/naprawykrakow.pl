@@ -3,12 +3,12 @@ import { PHONE, PHONE_DISPLAY, WHATSAPP_URL, TELEGRAM_URL } from "@/lib/contact"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-stone-200 bg-stone-900 text-stone-300">
+    <footer className="border-t border-zinc-200 bg-zinc-900 text-zinc-300">
       <div className="mx-auto max-w-6xl px-4 py-10">
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
             <p className="text-lg font-bold text-white">
-              Naprawy<span className="text-accent">Kraków</span>
+              Naprawy<span className="text-primary">Kraków</span>
             </p>
             <p className="mt-2 text-sm">Serwis AGD, elektryk i hydraulik w Krakowie i okolicach.</p>
           </div>
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="mt-8 text-xs text-stone-500">
+        <p className="mt-8 text-xs text-zinc-500">
           © {new Date().getFullYear()} NaprawyKraków. Jesteśmy zewnętrznym serwisem pogwarancyjnym.
         </p>
       </div>

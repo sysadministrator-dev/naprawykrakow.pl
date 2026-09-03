@@ -30,17 +30,17 @@ export default async function AdminOrdersPage({
 
   return (
     <div>
-      <h1 className="text-xl font-bold text-stone-900">Wszystkie zgłoszenia ({orders.length})</h1>
+      <h1 className="text-xl font-bold text-zinc-900">Wszystkie zgłoszenia ({orders.length})</h1>
 
       <div className="mt-4 flex flex-wrap gap-2 text-sm">
-        <Link href="/admin/orders" className={`rounded-full px-3 py-1 ${!status ? "bg-stone-900 text-white" : "bg-stone-200 text-stone-700"}`}>
+        <Link href="/admin/orders" className={`rounded-lg px-3 py-1 ${!status ? "bg-zinc-900 text-white" : "bg-zinc-200 text-zinc-700"}`}>
           Wszystkie
         </Link>
         {Object.values(OrderStatus).map((s) => (
           <Link
             key={s}
             href={`/admin/orders?status=${s}`}
-            className={`rounded-full px-3 py-1 ${status === s ? "bg-stone-900 text-white" : "bg-stone-200 text-stone-700"}`}
+            className={`rounded-lg px-3 py-1 ${status === s ? "bg-zinc-900 text-white" : "bg-zinc-200 text-zinc-700"}`}
           >
             {STATUS_LABELS[s]}
           </Link>
@@ -50,7 +50,7 @@ export default async function AdminOrdersPage({
       <div className="mt-6 overflow-x-auto">
         <table className="w-full min-w-[720px] border-collapse text-sm">
           <thead>
-            <tr className="border-b border-stone-300 text-left text-stone-500">
+            <tr className="border-b border-zinc-300 text-left text-zinc-500">
               <th className="py-2 pr-4">Zgłoszono</th>
               <th className="py-2 pr-4">Klient</th>
               <th className="py-2 pr-4">Usługa / adres</th>
@@ -61,17 +61,17 @@ export default async function AdminOrdersPage({
           </thead>
           <tbody>
             {orders.map((o) => (
-              <tr key={o.id} className="border-b border-stone-200 align-top">
-                <td className="py-3 pr-4 whitespace-nowrap text-stone-500">
+              <tr key={o.id} className="border-b border-zinc-200 align-top">
+                <td className="py-3 pr-4 whitespace-nowrap text-zinc-500">
                   {format(o.createdAt, "d MMM yyyy, HH:mm", { locale: pl })}
                 </td>
                 <td className="py-3 pr-4">
-                  <p className="font-medium text-stone-900">{o.name}</p>
-                  <p className="text-stone-500">{o.phone}</p>
+                  <p className="font-medium text-zinc-900">{o.name}</p>
+                  <p className="text-zinc-500">{o.phone}</p>
                 </td>
                 <td className="py-3 pr-4">
-                  <p className="text-stone-900">{o.service}</p>
-                  <p className="text-stone-500">{o.address}</p>
+                  <p className="text-zinc-900">{o.service}</p>
+                  <p className="text-zinc-500">{o.address}</p>
                 </td>
                 <td className="py-3 pr-4 whitespace-nowrap">
                   {o.scheduledAt ? format(o.scheduledAt, "d MMM, HH:mm", { locale: pl }) : "—"}
@@ -83,14 +83,14 @@ export default async function AdminOrdersPage({
                       type="datetime-local"
                       name="scheduledAt"
                       defaultValue={toDatetimeLocal(o.scheduledAt)}
-                      className="rounded border border-stone-300 px-2 py-1 text-xs"
+                      className="rounded border border-zinc-300 px-2 py-1 text-xs"
                     />
-                    <select name="status" defaultValue={o.status} className="rounded border border-stone-300 bg-white px-2 py-1 text-xs">
+                    <select name="status" defaultValue={o.status} className="rounded border border-zinc-300 bg-white px-2 py-1 text-xs">
                       {Object.values(OrderStatus).map((s) => (
                         <option key={s} value={s}>{STATUS_LABELS[s]}</option>
                       ))}
                     </select>
-                    <button type="submit" className="rounded bg-accent px-2 py-1 text-xs font-semibold text-white hover:bg-accent-dark">
+                    <button type="submit" className="rounded bg-primary px-2 py-1 text-xs font-semibold text-white hover:bg-primary/90">
                       Zapisz
                     </button>
                   </form>

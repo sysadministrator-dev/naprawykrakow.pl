@@ -19,13 +19,13 @@ export default function Home() {
         <Reviews />
         <ServiceArea />
 
-        <section id="zamow" className="bg-stone-50 py-16">
+        <section id="zamow" className="bg-zinc-50 py-16">
           <div className="mx-auto max-w-2xl px-4">
-            <h2 className="text-3xl font-bold text-stone-900">Zamów usługę na dzisiaj</h2>
-            <p className="mt-2 text-stone-600">
+            <h2 className="text-3xl font-bold text-zinc-900">Zamów usługę na dzisiaj</h2>
+            <p className="mt-2 text-zinc-600">
               Zarezerwuj termin szybko przez telefon lub online — oddzwonimy i potwierdzimy wizytę.
             </p>
-            <div className="mt-8 rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
+            <div className="mt-8 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
               <OrderForm />
             </div>
           </div>

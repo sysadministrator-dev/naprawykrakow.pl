@@ -6,8 +6,8 @@ import { servicePages } from "@/lib/service-pages";
 export default function Services() {
   return (
     <section id="uslugi" className="mx-auto max-w-6xl px-4 py-16">
-      <h2 className="text-3xl font-bold text-stone-900">Popularne usługi</h2>
-      <p className="mt-2 max-w-2xl text-stone-600">
+      <h2 className="text-3xl font-bold text-zinc-900">Popularne usługi</h2>
+      <p className="mt-2 max-w-2xl text-zinc-600">
         Naprawa AGD, elektryka i hydraulika w Krakowie i okolicach. Wybierz usługę, aby
         dowiedzieć się więcej, lub od razu zamów wizytę.
       </p>
@@ -22,7 +22,7 @@ export default function Services() {
             <Link
               key={s.slug}
               href={href}
-              className="group flex flex-col items-center gap-3 rounded-2xl border border-stone-200 bg-white p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-accent hover:shadow-md"
+              className="group flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 bg-white p-5 text-center shadow-sm transition hover:-translate-y-0.5 hover:border-primary hover:shadow-md"
             >
               <div className="flex h-16 w-16 items-center justify-center">
                 {isImage ? (
@@ -32,8 +32,8 @@ export default function Services() {
                 )}
               </div>
               <div>
-                <p className="font-semibold text-stone-900 group-hover:text-accent-dark">{s.name}</p>
-                <p className="mt-1 text-xs text-stone-500">{s.short}</p>
+                <p className="font-semibold text-zinc-900 group-hover:text-primary/90">{s.name}</p>
+                <p className="mt-1 text-xs text-zinc-500">{s.short}</p>
               </div>
             </Link>
           );

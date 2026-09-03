@@ -20,18 +20,18 @@ const items = [
 
 export default function WorkGallery() {
   return (
-    <section id="realizacje" className="bg-stone-50 py-16">
+    <section id="realizacje" className="bg-zinc-50 py-16">
       <div className="mx-auto max-w-6xl px-4">
-        <h2 className="text-3xl font-bold text-stone-900">Realizacje</h2>
+        <h2 className="text-3xl font-bold text-zinc-900">Realizacje</h2>
         <div className="mt-8 grid gap-8 md:grid-cols-3">
           {items.map((item) => (
-            <div key={item.title} className="overflow-hidden rounded-2xl border border-stone-200 bg-white shadow-sm">
+            <div key={item.title} className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
               <div className="relative h-48 w-full">
                 <Image src={item.image} alt={item.title} fill className="object-cover" />
               </div>
               <div className="p-5">
-                <h3 className="font-semibold text-stone-900">{item.title}</h3>
-                <p className="mt-1 text-sm text-stone-600">{item.text}</p>
+                <h3 className="font-semibold text-zinc-900">{item.title}</h3>
+                <p className="mt-1 text-sm text-zinc-600">{item.text}</p>
               </div>
             </div>
           ))}
